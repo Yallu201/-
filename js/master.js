@@ -17,20 +17,26 @@
         $('#sliderAB').css("width",100);
         $('#sliderG').css("width",50);
         $('#sliderDE').css("height",50);
+		
+		$("#sliderAB .tooltip-main").css("top","20px");
+		$("#sliderC .tooltip-main").css("right","30px");
+//		$("#sliderDE .tooltip-main").css("left","10px").css("top","49px");
+		$("#sliderG .tooltip-main").css("width","36px").css("margin-top","-41px");
+		
     }
 	
 			
 		/* sec1 slider */
 		$('#sliderW_').slider({
 			formatter: function(value) {
-				return value + ' px';
-			}
+				return value +' px';
+			},tooltip_position:'bottom'
 		}).on("slide", function(e) {
 			setFont_();
 		});
 		$('#sliderG_').slider({
 			formatter: function(value) {
-				return (50-value) + ' px';
+				return ' 틈 ';
 			},orientation: 'vertical'
             ,tooltip_position:'right'
 		}).on("slide", function(e) {
@@ -38,14 +44,14 @@
 		});
 		$('#sliderAB_').slider({
 			formatter: function(value) {
-				return '( a : b ) = ( ' +value + ' : ' + (100-value) +' )';
+				return ' ① : ② ';
 			},tooltip_position:'top'
 		}).on("slide", function(e) {
 			setFont_();
 		});
 		$('#sliderDE_').slider({
 			formatter: function(value) {
-				return '( d : e ) = ( ' +value + ' : ' + (100-value) +' )';
+				return ' ③ : ④ ';
 			},orientation: 'vertical'
             ,tooltip_position:'right'
 		}).on("slide", function(e) {
@@ -53,7 +59,7 @@
 		});
 		$('#sliderC_').slider({
 			formatter: function(value) {
-				return '( d + e : c ) = ( 1.00 : ' + ((100-value)/50).toFixed(2) +' )';
+				return ' ⑤ : ⑥ ';
 			}
             ,orientation: 'vertical'
             ,tooltip_position:'right'
@@ -78,21 +84,23 @@
 		});
 		$('#sliderG').slider({
 			formatter: function(value) {
-				return value + ' px';
+				return '틈';
 			}
 		}).on("slide", function(e) {
 			setFont();
 		});
 		$('#sliderAB').slider({
 			formatter: function(value) {
-				return '( a : b ) = ( ' +value + ' : ' + (100-value) +' )';
+				return ' ① : ② ';
+//				return '( a : b ) = ( ' +value + ' : ' + (100-value) +' )';
 			},tooltip_position:'bottom'
 		}).on("slide", function(e) {
 			setFont();
 		});
 		$('#sliderDE').slider({
 			formatter: function(value) {
-				return '( d : e ) = ( ' +value + ' : ' + (100-value) +' )';
+				return ' ③ : ④ ';
+//				return '( d : e ) = ( ' +value + ' : ' + (100-value) +' )';
 			},orientation: 'vertical'
             ,tooltip_position:'right'
 		}).on("slide", function(e) {
@@ -100,7 +108,8 @@
 		});
 		$('#sliderC').slider({
 			formatter: function(value) {
-				return '( d + e : c ) = ( 1.00 : ' + ((100-value)/50).toFixed(2) +' )';
+//				return '( d + e : c ) = ( 1.00 : ' + ((100-value)/50).toFixed(2) +' )';
+				return ' ⑤ : ⑥ ';
 			}
             ,orientation: 'vertical'
             ,tooltip_position:'left'

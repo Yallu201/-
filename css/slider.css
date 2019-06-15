@@ -168,3 +168,69 @@
 		  margin-bottom: 203px;
       }
 /*    수직 슬라이더 G_ 설정*/
+/*    슬라이더 팝업 설정 [ page 1 ]  */
+
+#sec1 #sliderC_ .tooltip-inner
+,#sec1 #sliderDE_ .tooltip-inner{
+	background: white;
+    color: #000;
+    font-size: 18px;
+    margin-left: -52px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+#sec1 #sliderG_ .tooltip-inner{
+	background: white;
+    color: #000;
+    font-size: 18px;
+    margin-left: -36px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+#sec1 #sliderAB_ .tooltip-inner{
+	background: white;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+}
+#sec1 #sliderAB_ .tooltip.top {
+    margin-top: -46px;
+    margin-left: 4px;
+}
+#sec1 #sliderW_ .tooltip-inner{
+	background: white;
+    color: #ddd;
+    font-size: 16px;
+}
+#sec1 #sliderW_ .tooltip-arrow{
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+/*    슬라이더 팝업 설정 [ page 1 ]  */
+/*    슬라이더 팝업 설정 [ page 4 ]  */
+#sec4 .tooltip-inner{
+    font-size: 18px;
+    font-weight: bold;
+}
+#sec4 .tooltip-inner
+,#sec4 .tooltip-arrow{
+	background: transparent;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+}
+#sec4 #sliderC .tooltip-inner{
+    margin-bottom: 4px;
+    padding: 3px 15px 3px 0px;
+}
+
+
+#sec4 #sliderAB .tooltip-inner{
+    margin-left: -35px;
+	margin-bottom: -35px;
+}
+
+/*    슬라이더 팝업 설정 [ page 4 ]  */

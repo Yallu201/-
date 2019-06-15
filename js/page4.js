@@ -1,4 +1,3 @@
-
 	/* 슬라이더 객체*/  
 	var sliderS = document.getElementById("sliderS");
 	var sliderW = document.getElementById("sliderW");
@@ -258,9 +257,10 @@
 		hum[1].setAttribute("y2",(rd-g)>>2);
 		
 		hum[2].setAttribute("x",w_);
-		hum[2].setAttribute("y",((rd-g)>>1)-w_);
+//		hum[2].setAttribute("y",((rd-g)>>1)-w_);
+		hum[2].setAttribute("y",((rd-g)>>1)-(w_>>1));
 		hum[2].setAttribute("width",800 - w);
-		hum[2].setAttribute("height",(rd>>1) - g);
+		hum[2].setAttribute("height",(rd>>1) - g -(w_>>1));
 		hum[2].setAttribute("rx",(rd - w)>>2);
 		/*ㅎ*/
 		
