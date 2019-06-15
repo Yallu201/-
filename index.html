@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+	<!-- jQuery CDN -->
+	<script
+	src="https://code.jquery.com/jquery-2.2.4.min.js"
+	integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	crossorigin="anonymous"></script>
+	<!-- jQuery CDN -->
+
+	<!-- 합쳐지고 최소화된 최신 CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+	<!-- 부가적인 테마 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+	<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	
+	<!-- bootstrap-slider -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/css/bootstrap-slider.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/bootstrap-slider.min.js"></script>
+	<!-- bootstrap-slider -->
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/sec1.css">
+  <link rel="stylesheet" href="css/sec2.css">
+  <link rel="stylesheet" href="css/sec3.css">
+  <link rel="stylesheet" href="css/sec4.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <style>
+    section{
+        padding: 50px 40px 50px 40px;
+		height:1080px;
+    }
+	#sec1{
+		padding: 50px 0px 167px 40px;
+	}
+	  .container1{
+		  display:flex;
+	  }
+	  .item{
+		  height: 30px;
+	  }
+	  .ra,.rb,.rd,.re{
+		  flex:50;
+	  }
+      .rc,.rf{
+        flex:100;
+      }
+	  .cls-1{
+		  fill:none;
+		  stroke:#FFF;
+		  stroke-miterlimit:10;
+	  }
+	  .cls-2{
+		  fill:none;
+		  stroke:#000;
+		  stroke-miterlimit:10;
+	  }
+	  .slider_wrap{
+		  display:flex;
+	  }
+	  label{
+		  display: block;
+		  text-align: center;
+	  }
+	  .item{
+		  text-align:center;
+		  padding-top: 4px;
+		  font-weight: bold;
+		  font-size: 18px;
+	  }
+      #sec4 svg{
+        margin: 5px;
+		  stroke:white;
+      }
+	  #sec1 svg{
+		  stroke:black;
+      }
+	  #darkkongpot{
+		  margin-left:auto;
+		  margin-right:auto;
+	  }
+
+	  .wrap4,#dark_wrap{
+		  display:flex;
+          flex-direction: column;
+	  }
+
+/*   darkkongpot ratioAB   */
+      #ratioAB{
+          position:relative;
+      }
+      #ratioAB div{
+          display:inline-block;
+          position: absolute;
+      }
+
+/*   darkkongpot ratioAB   */
+/*   darkkongpot ratioG   */
+      #ratioG .slider-track {
+        height: 2px;
+        width: 100%;
+        margin-top: -5px;
+        top: 50%;
+        left: 0;
+      }
+/*   darkkongpot ratioG   */
+/*   chin div==> inline-block      */
+      #ratioG{
+          position:relative;
+      }
+      #ratioG div{
+          display:inline-block;
+          position: absolute;
+      }
+      #sliderG{
+          left:25px;
+          bottom:110px;
+      }
+/*   chin div==> inline-block      */
+      .sec{
+        display:flex;
+        position:relative;
+      }
+      #sec2{
+        color:#fff;
+        background-color:black; 
+        flex-direction: row;
+      }
+      #sec4{
+		padding: 0;
+        background-color:black;
+        justify-content: center;
+        flex-direction: column;
+	  }
+	  #slider_wrap4{
+		  position: absolute;
+		  right:100px;
+		  bottom: 90px;
+	  }
+/*   page02_left   */
+      #page02_left{
+          flex:35;
+      }
+/*   page02_left   */
+/*   page02_right   */
+      #page02_right{
+          flex:65;
+          display: flex;
+          justify-content: center;
+        flex-direction: column;
+      }
+      #page02_right img{
+        height: 95%;
+        margin-bottom: 50px;
+      }
+      #page02_right .caption{
+          position:absolute;
+          z-index:5;
+		  font-size: 18px;
+    	font-weight: bold;
+      }
+      #page02_right #caption1{
+		right: 471px;
+		top: 374px;
+      }
+      #page02_right #caption2{
+		right: 1081px;
+		top: 680px;
+      }
+      #page02_right #caption3{
+		  right: 768px;
+          top: 680px;
+      }
+      #page02_right #caption4{
+		  right: 462px;
+          top: 680px;
+      }
+      #page02_right #caption5{
+    	right: 153px;
+          top: 680px;
+      }
+      #page02_right #caption6{
+		right: 470px;
+		top: 985px;
+      }
+      #page02_right #caption7{
+		right: 118px;
+          top: 985px;
+      }
+/*   page02_right   */
+/*   header   */
+      #header{
+		position: fixed;
+		width: 532px;
+		height: 200px;
+		color: #000;
+		top: 50px;
+		left: 40px;
+		z-index: 5;
+		transition-duration: 0.4s;
+      }
+      #header>.square{
+		width: 193px;
+		height: 37px;
+		background: #000;
+      }
+      #header>.main_title{
+        font-size: 2.8rem;
+        font-weight: 900;
+        margin-top: 15px;
+        margin-bottom: 35px;
+      }
+      #header>.summary{
+        font-weight: bold;
+        font-size: 12px;
+      }
+      .summary .summary_part{
+        margin-bottom:7px;
+      }
+/*   header   */
+/*   header2   */
+      .header2{
+          position:absolute;
+/*          background: #789;*/
+          width:672px;
+          height:300px;
+          color:#fff;
+      }
+/*   header2   */
+/*   header4   */
+      .header4{
+        position: absolute;
+        width: 672px;
+        height: 300px;
+        color: #fff;
+        top: 50px;
+      }
+/*   header4   */
+/*   sec1   */
+	  #sec1 > .author{
+		  position:absolute;
+		  left: 600px;
+		  font-size: 18px;
+		  font-weight: bold;
+		  top: 43px;
+	  }
+	  #sec1 > .subject{
+		  position:absolute;
+		  right: 40px;
+		  top: 50px;
+		  font-size:20px;
+		  font-weight: bold;
+		  top: 43px;
+	  }
+	  #sec1 > .subject > .subject_item{
+		display: inline-block;
+		margin-left: 14px;
+	  }
+	  #sec1 .structure1
+		,#sec1 .structure2
+	  ,#sec1 .structure3{
+			display: flex;
+			flex-direction: column-reverse;
+		}
+
+	  #sec1 .structure1_item
+	  ,#sec1 .structure2_item{
+		  fill:#000;
+		  stroke:#fff;
+		  stroke-miterlimit:10;
+		  
+		display: flex;
+		flex-direction: column-reverse;
+		padding-bottom: 100px;
+	  }
+	  #sec1 .structure3{
+		  margin-left:80px;
+	  }
+		#sec1 .structure3  .line_mid{
+			margin: 10px 0 10px 0;
+		}
+	  	#sec1 .structure3  .col_center{
+			margin:  0 10px 0 10px;
+		}
+		#sec1 .structure3 #sliderW_{
+			margin-bottom: 60px;
+			width:200px;
+		}
+
+/*   sec1   */
+/*   sec2   */
+      #sec2 .small_title{
+        position: absolute;
+        top: 342px;
+        font-size: 18px;
+        font-weight: 900;
+      }
+      #sec2 .small_title .small_title_part{
+          margin-bottom:5px;
+      }
+    #sec2 .description2 {
+        position: absolute;
+        top: 409px;
+        left: 189px;
+        width: 308px;
+        font-size: 1.1rem;
+    }
+      #sec2 .description2 .des_box1{
+          margin-bottom: 30px;
+      }
+      #sec2 .description2 .des_box1 .des_line{
+          margin-bottom: 9px;
+      }
+/*   sec2   */
+/*	 sec3   */
+	#sec3 .small_title{
+		position: absolute;
+		top: 485px;
+		font-size: 18px;
+		font-weight: 900;
+	}
+	#sec3 .small_title .small_title_part{
+		margin-bottom:5px;
+	}
+	  
+    #sec3 .description2 {
+		position: absolute;
+		top: 326px;
+		left: 204px;
+		width: 590px;
+		font-size: 12px;
+    }
+	#sec3 .description2 .des_box1{
+		margin-bottom: 30px;
+	}
+	#sec3 .description2 .des_box1 .des_line{
+		margin-bottom: 9px;
+	}
+/*	 sec3   */
+/*	 sec4   */
+	  #sliderS .slider-track
+	  ,#sliderW .slider-track
+	  {background: #333;}
+	  #sliderS .slider-selection
+	  ,#sliderW .slider-selection
+	  {
+		  background: #111;
+	  }
+	  #sliderS .slider-handle
+	  ,#sliderW .slider-handle
+	  {
+		background: #111;
+		height: 20px;
+		width: 20px;
+		margin-top: 3px;
+	  }
+/*	 sec4   */
+/*	footer  */
+	  .footer{
+		position: absolute;
+		bottom: 70px;
+		width: 100%;
+		font-weight: 900;
+		font-size: 24px;
+		color: white;	
+	  }
+	  .footer .footer_mention{
+		  text-align: center;
+		  margin-bottom:10px;
+	  }
+/*	footer  */
+/*  tag  */
+	  .tag:hover{
+		  cursor: pointer;
+	  }
+	  .tag{
+		position: absolute;
+		bottom: 0px;
+		font-size: 24px;
+		font-weight: bold;
+		text-align: center;
+		width: 193px;
+		height: 80px;
+		padding-top: 25px;
+	  }
+	  .tag_black{
+		  right: 50px;
+		  background:black;
+		  color:white;
+	  }
+	  .tag_white{
+		  left: 50px;
+		  background:white;
+		  color:black;
+	  }
+/*  tag  */
+  </style>
+</head>
+<body>
+ 	<div id="header">
+          <div class="square"></div>
+          <div class="main_title">프로젝트: 부분과전 체</div>
+          <div class="summary">
+            <div class="summary_part">
+            프로젝트 ‘부분과전 체’는 자음자소와 모음자소를 한 방에 사방을 맞추도록 집어넣고,
+            </div><div class="summary_part">
+            한글 모임꼴에 따라 비율을 맞추어 서로 유관하게 변화하도록 하는 인터랙티브 타이포그래피 프로젝트입니다.
+            </div><div class="summary_part">
+            전체에 따라 부분이 형성되고, 부분에 맞추어 전체가 모습을 바꾸는 중심주제에 맞추어 이름 지었습니다.
+            </div>
+          </div>
+      </div>
+  <section id="sec1" class="sec">
+	  <div class="slider_wrap_left">
+		<!--  sliderC   -->
+		<input id="sliderC_" data-slider-id='sliderC_' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50"  data-slider-handle="square"/>
+		<!--  sliderC   -->
+	  </div>
+	  <div class="slider_wrap_left" id="slider_wrap_left2">
+		<!--  ratio DE   -->
+		<input id="sliderDE_" data-slider-id='sliderDE_' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50"  data-slider-handle="square"/>
+		<!--  ratio DE   -->
+	  </div>
+
+     <div class="structure1">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="450" height="450">
+			<rect class="temp temp1" width="400" height="200"/>
+			<rect class="temp temp1" y="200" width="400" height="200"/>
+			<rect class="temp temp1" x="400" width="400" height="400"/>
+			<rect class="temp temp1" y="400" width="800" height="400"/>
+      	</svg>
+		<!--  sliderAB_   -->
+	  	<input id="sliderAB_" data-slider-id='sliderAB_' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50"  data-slider-handle="square"/>
+     	<!--  sliderAB_   -->
+      </div>
+	  <div class="slider_wrap_left"  id="slider_wrap_left3">
+     	<!--  sliderG_   -->
+		<input id="sliderG_" data-slider-id='sliderG_' type="text" data-slider-min="0" data-slider-max="50" data-slider-step="1" data-slider-value="45"  data-slider-handle="square"/>
+		<!--  sliderG_   -->
+	  </div>
+      <div class="structure2">
+        <div class="line_bottom">
+     	<svg class="col_left"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="200" height="200">
+			<rect class="temp temp6" width="400" height="200"/>
+			<rect class="temp temp6" y="200" width="400" height="200"/>
+			<rect class="temp temp6" x="400" width="400" height="400"/>
+			<rect class="temp temp6" y="400" width="800" height="400"/>
+      	</svg>
+      	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="200" height="200">
+			<rect class="temp temp7" width="400" height="400"/>
+			<rect class="temp temp7" x="400" width="400" height="400"/>
+     		<rect class="temp temp7" y="400" width="800" height="400"/>
+      	</svg>
+      	</div>
+      	
+      	<div class="line_mid">
+     	<svg class="col_left"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="200" height="200">
+			<rect class="temp temp4" width="800" height="200"/>
+			<rect class="temp temp4" y="200" width="800" height="200"/>
+     		<rect class="temp temp4" y="400" width="800" height="400"/>
+      	</svg>
+      	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="200" height="200">
+			<rect class="temp temp5" width="400" height="400"/>
+			<rect class="temp temp5" y="400" width="400" height="400"/>
+     		<rect class="temp temp5" x="400" width="400" height="800"/>
+      	</svg>
+      	</div>
+      	
+		<div class="line_top">
+     	<svg class="col_left"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="200" height="200">
+			<rect class="temp temp2" width="800" height="400"/>
+			<rect class="temp temp2" y="400" width="800" height="400"/>
+      	</svg>
+      	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="200" height="200">
+			<rect class="temp temp3" width="400" height="800"/>
+			<rect class="temp temp3" x="400" width="400" height="800"/>
+      	</svg>
+      	</div>
+    	
+      	<div class="line_mid">
+      	</div>
+      	<div class="line_bottom">
+      	</div>
+      </div>
+		<div class="structure3">
+			<div class="bubunii">
+				<div class="line_top">
+				<!-- 부 -->
+				<svg id="bu" class="word_svg_" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 800 800">
+
+					<polyline class="cls-2 bu" points="50 0 50 350 750 350 750 0" />
+					<line class="cls-2 bu" y1="150" x2="800" y2="150" />
+
+					<line class="cls-2 bu" y1="450" x2="800" y2="450" />
+					<line class="cls-2 bu" x1="400" y1="800" x2="400" y2="400" />
+
+				</svg>
+
+				<!-- 부 -->
+				<!-- 분 -->
+
+				<svg id="bun" class="word_svg_ col_center" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 800 800">
+
+				  <polyline class="cls-2 bun" points="50 0 50 150 750 150 750 0" />
+				  <line class="cls-2 bun" y1="50" x2="800" y2="50" />
+				  <line class="cls-2 bun" y1="225" x2="800" y2="225" />
+				  <line class="cls-2 bun" x1="400" y1="400" x2="400" y2="200" />
+				  <polyline class="cls-2 bun" points="50 400 50 750 800 750" />
+				</svg>
+
+				<!-- 분 -->
+				<!-- 이 -->
+
+				<svg id="ii" class="word_svg_" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 800 800">
+				<rect class="cls-2 ii" x="50" y="50" width="300" height="700" rx="150" />
+				<line class="cls-2 ii" x1="750" x2="750" y2="800" />
+				</svg>
+
+				<!-- 이 -->
+				</div>
+
+				<div class="line_mid">
+				<!-- 전 -->
+
+				<svg id="jeon" class="word_svg_" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 800 800">
+				 <polyline class="cls-2 jeon" points="50 400 50 750 800 750" />
+				 <line class="cls-2 jeon" x1="400" y1="200" x2="800" y2="200" />
+				 <line class="cls-2 jeon" x1="750" x2="750" y2="400" />
+				 <line class="cls-2 jeon" y1="50" x2="400" y2="50" />
+				 <path class="cls-2 jeon" d="M0,350H0c110.46,0,200-89.54,200-200V0" />
+				 <path class="cls-2 jeon" d="M400,350h0c-110.46,0-200-89.54-200-200V0" />
+				</svg>
+
+				<!-- 전 -->
+				<!-- 체 -->
+
+				<svg id="che" class="word_svg_ col_center" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 800 800">
+
+
+				 <line class="cls-2 che" y1="200" x2="400" y2="200" />
+				 <path class="cls-2 che" d="M0,750H0c110.46,0,200-89.54,200-200V0" />
+				 <path class="cls-2 che" d="M400,750h0c-110.46,0-200-89.54-200-200V0" />
+
+				 <line class="cls-2 che" x1="400" y1="400" x2="600" y2="400"/>
+				 <line class="cls-2 che" x1="550" x2="550" y2="800" />
+				 <line class="cls-2 che" x1="750" x2="750" y2="800" />
+
+				</svg>
+
+				<!-- 체 -->
+				<!-- 가 -->
+
+				<svg id="ga" class="word_svg_" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 950 800">
+				 <polyline class="cls-2 ga" points="0 50 350 50 350 800" />
+				 <line class="cls-2 ga" x1="750" x2="750" y2="800" />
+				 <line class="cls-2 ga" x1="750" y1="400" x2="950" y2="400" />
+				</svg>
+
+				<!-- 가 -->
+				</div>
+				<div class="line_buttom">
+				<!-- 될 -->
+
+				<svg id="doil" class="word_svg_" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 800 800">
+
+				 <polyline class="cls-2 doil" points="400 50 50 50 50 150 400 150" />
+				 <line class="cls-2 doil" y1="350" x2="400" y2="350" />
+				 <line class="cls-2 doil" x1="200" y1="200" x2="200" y2="400" />
+				 <line class="cls-2 doil" x1="750" x2="750" y2="400" />
+				 <polyline class="cls-2 doil" points="0 450 750 450 750 600 50 600 50 750 800 750" />
+
+				</svg>
+
+				<!-- 될 -->
+				<!-- 때 -->
+
+				<svg id="ddae" class="word_svg_ line_buttom col_center" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 800 800">
+				 <polyline class="cls-2 ddae" points="200 50 50 50 50 750 200 750" />
+				 <polyline class="cls-2 ddae" points="400 50 250 50 250 750 400 750" />
+				 <line class="cls-2 ddae" x1="450" x2="450" y2="800" />
+				 <line class="cls-2 ddae" x1="750" x2="750" y2="800" />
+				 <line class="cls-2 ddae" x1="450" y1="400" x2="750" y2="400" />
+				</svg>
+
+				<!-- 때 -->
+				</div>
+			</div>
+
+		<!--  sliderW_   -->
+	     <input id="sliderW_" data-slider-id='sliderW_' type="text" data-slider-min="10" data-slider-max="40" data-slider-step="1" data-slider-value="10"  data-slider-handle="round"/>	
+	     <label style="color:#ddd"> 굵기 조절 </label>
+		<!--  sliderW_   -->
+		</div>
+      <div class="author">
+      	<p>Jeong Woong Ho</p> 
+      	<p>copyright(c) 2002 All rights reserved</p>
+      </div>
+      <div class="subject">
+		<div class="subject_item">시험과 개요</div>
+		<div class="subject_item">+</div>
+		<div class="subject_item">목적과 설명</div>
+      </div>
+      <div class="tag tag_black" onclick="moveTo(1);">
+      	구조 설명
+      </div>
+      
+      
+  </section>
+   <section id="sec2" class="sec">
+       <div id="page02_left">
+            <div class="small_title">
+                <div class="small_title_part">
+                여섯개의 모임꼴,
+                </div><div class="small_title_part">
+                세 개의 비례,
+                </div><div class="small_title_part">
+                틈과 크기<br>
+                </div>
+            </div>
+            <div class="description2">
+                <div class="des_box1">
+                <p class="des_line">
+                한글의 모임꼴 가장 복잡하고, 모든 구조를 조금씩 품은 ‘복함모임꼴</p><p class="des_line"> 받친 글자’를 기준으로   각 구조를 파생해냈습니다. 전체 형태를 볼 </p><p class="des_line">때, 복합모임꼴이 지닌 구조를 모두 그대로 받아 6개의 기준 비율을</p><p class="des_line"> 설정해 조절 가능하도록 설계했습니다. 다만, 세로모임꼴의 경우</p><p class="des_line"> 가로모임꼴과는 달리 받치는 것에 따라 아래 공간이 달라지는 점을</p><p class="des_line"> 고려해 전체가 온전히 기계적으로 비례하도록 3과 4의 비율을</p><p class="des_line"> 유지한 채 확장되도록 설계했습니다. 각 부분을 공유하는 모임꼴들은</p><p class="des_line"> 서로 그 부분의 변형된 것에 비례해 변형되며 상호적으로 모양을</p>바꿉니다.
+                </div>
+                <div class="des_box1">
+                <p class="des_line">
+                착시에 따른 형태 보상(시각보정)의 경우 중요하게 고려될 부분이나,</p><p class="des_line"> 달라지는 방의 크기와 그에 따른 상호작용이 이 프로젝트에서</p><p class="des_line"> 보여주고자 하는 주안점으로 모두 고려하기는 어렵다 생각해 오히려</p><p class="des_line"> 온전히 수학적인 비례만을 변수로 두었습니다. 가로획과 세로획도</p>두께 차이가 없습니다.
+               </div>
+                <div class="des_box1">
+                <p class="des_line">
+                즉 세 개의 중요 비, 1:2(가로모임), 3:4(세로모임), 5:6(세로 또는</p><p class="des_line"> 가로모임꼴과 받침)에 글자 크기, 각 활자 틈의 크기로 총 다섯 개의 </p><p class="des_line">비례 조정 슬라이더를 두고 관람자가 자유롭게 그 변하는 형태를 </p>감상하도록 했습니다.
+                </div>
+            </div>
+       </div>
+      <div id="page02_right">
+        <div id="caption1" class="caption">
+        &lt;가로모임꼴 민글자&gt;
+        </div><div id="caption2" class="caption">
+        &lt;세로모임꼴 민글자&gt;
+        </div><div id="caption3" class="caption">
+        &lt;세로모임꼴 받친 글자&gt;
+        </div><div id="caption4" class="caption">
+        &lt;복합모임꼴 받친 글자&gt;
+        </div><div id="caption5" class="caption">
+        &lt;가로모임꼴 받친 글자&gt;
+        </div><div id="caption6" class="caption">
+        &lt;복합모임꼴 민글자&gt;
+        </div><div id="caption7" class="caption">
+        &lt;시각보정 없는 온전한 정사각형&gt;
+        </div>
+       <img src="svg/page02.svg" alt="Breaking Borders Logo">
+      </div>
+      <div class="tag tag_white" onclick="moveTo(2);">
+      	자소 설명
+      </div>
+
+   </section>
+   
+    <section id="sec3" class="sec">
+    	<div class="small_title">
+			<div class="small_title_part">
+			방을 꽉 채우는
+			</div><div class="small_title_part">
+			 자음자소와
+			</div><div class="small_title_part">
+			 모음자소
+			</div>
+		</div>
+		<div class="description2">
+			<div class="des_box1">
+			<p class="des_line">
+			자음자소와 모음자소는 차지해야 하는 방(공간)을 수학적으로 양 끝에 맞닿도록 해 방 크기를 시각적으로 짐작할 수 있게 </p><p class="des_line">했습니다. 방의 크기에 따라 시각적으로 형태를 변화하지 않도록 규칙을 정했습니다. 그래서 ‘ㅎ’이나 ‘ㅊ’ 처럼 본래</p><p class="des_line"> 의도적으로 천장을 삐져나와야 하는 경우도 예외를 두지 않았습니다.  </p>
+			</div>
+			<div class="des_box1">
+			<p class="des_line">
+			소위 ‘이중모음’이라 잘못 묶어 부르는 ‘ㅔ, ㅐ, ㅟ’ 등 두 모음자소가 결합된 경우 앞서 정한 방의 크기를 맞추어 모두</p><p class="des_line"> 채우도록 하고, 기존 활자들처럼 따로 형태를 만들지는 않았습니다. 예를 들어 ‘원’처럼 ‘ㅝ’로 두 모음이 복합적으로 모인</p><p class="des_line"> 경우 ‘ㅓ’가 ‘ㅜ’ 아래를 파고들도록 다시 형태를 짜는 것이 맞으나, 모듈화하는 초기 컨셉에 더 무게를 두어 ‘ㅜ’, ‘ㅓ’가</p><p class="des_line"> 물리적으로 접촉하게만 했습니다.  </p>
+		   </div>
+			<div class="des_box1">
+			<p class="des_line">
+			마찬가지로 ‘ㄲ, ㄸ, ㅃ, ㅆ, ㅉ’와 같은 쌍자음의 자소, ‘기역시옷, 니은지읒, 니은히읗, 리을기역, 리을미음, 리을비읍,</p><p class="des_line"> 리을시옷,리을티읕, 리을피읖, 리을히읗, 비읍시옷’과 같은 겹받침 자음 자소등도 본래의 자음자소 공간을 수학적으로</p><p class="des_line"> 반씩 차지하도록 했습니다. 다만 두 자음이 결합된 것을 고려해 가운데 틈을 지니도록 했습니다. </p>
+			</div>
+			<div class="des_box1">
+			<p class="des_line">
+			허나 모음자소 중 ‘ㅏ’, ‘ㅑ’는 방의 중심에서 오른쪽 반절로 뻗어나가는 형태가 아닌 먼저 맨 오른쪽 획을 채우고 공간</p><p class="des_line">  밖으로 뻗도록 설계했습니다. 이는 모음자소가 차지하는 방의 크기를 시각적으로 오판단하는 것을 줄이고, 받침이 있는</p><p class="des_line">  모임꼴에서 구조적 위화감을 줄이기 위함입니다. 가로모임꼴은 두 모음이 결합되는 것 이외에 더 자소가 들어서지 않지만,</p> 세로모임꼴은 모음자소 밑에 자음자소가 붙어 형태가 일부 모임꼴에서 우그러뜨려질 수 있는 것을 고려하였습니다.
+			</div>
+		</div>
+		<div class="tag tag_black" onclick="moveTo(3);">
+			예문 2
+		</div>
+    </section>
+    
+  <section id="sec4" class="sec">
+	<div class="footer">
+		<div class="footer_mention">Digital Design Project</div>
+		<div class="footer_mention">2019 1st semester</div>
+	</div>
+    <article class="wrap4">
+    <div id="darkkongpot">
+<!--   닭콩팥훔친집사   -->
+    <!--  sliderC   -->
+    <input id="sliderC" data-slider-id='sliderC' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50"  data-slider-handle="square"/>
+    <!--  sliderC   -->
+      <!-- 닭 -->
+         <span id="ratioAB">
+          <input id="sliderAB" data-slider-id='sliderAB' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50"  data-slider-handle="square"/>
+          
+          <svg id="dark" class="word_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800">
+          <polyline class="cls-1 dark" points="400 50 50 50 50 350 400 350"/>
+          <line class="cls-1 dark" x1="750" y1="401" x2="750"/>
+          <line class="cls-1 dark" x1="800" y1="200" x2="900" y2="200"/>
+          <polyline class="cls-1 dark" points="0 450 350 450 350 600 50 600 50 750 400 750"/>
+          <polyline class="cls-1 dark" points="400 450 750 450 750 800"/>
+          </svg>
+        </span>
+      <!-- 닭 -->
+      <!-- 콩 -->
+      
+      
+      <svg id="kong" class="word_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      
+      <polyline class="cls-1 kong" points="0 50 750 50 750 200"/>
+      <line class="cls-1 kong" y1="114.29" x2="800" y2="114.29"/>
+      
+      <line class="cls-1 kong" x1="400" y1="200" x2="400" y2="400"/>
+      <line class="cls-1 kong" y1="350" x2="800" y2="350"/>
+      
+      <rect class="cls-1 kong" x="50" y="450" width="700" height="300" rx="150"/>
+      </svg>
+     <!-- 콩 -->
+     <!-- 팥 -->
+     
+     <svg id="pot" class="word_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800">
+     <line class="cls-1 pot" y1="50" x2="400" y2="50"/>
+     <line class="cls-1 pot" y1="350" x2="400" y2="350"/>
+     <line class="cls-1 pot" x1="100" y1="50" x2="100" y2="350"/>
+     <line class="cls-1 pot" x1="300" y1="50" x2="300" y2="350"/>
+     
+     <line class="cls-1 pot" x1="750" x2="750" y2="400"/>
+     <line class="cls-1 pot" x1="800" y1="200" x2="900" y2="200"/>
+     
+     <polyline class="cls-1 pot" points="800 450 50 450 50 750 800 750"/>
+     <line class="cls-1 pot" x1="800" y1="600" x2="50" y2="600"/>
+     </svg>
+     
+     <!-- 팥 -->
+     <!-- 훔 -->
+     
+     <svg  id="hum" class="word_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+     <line class="cls-1 hum" x1="400" x2="400" y2="50"/>
+     <line class="cls-1 hum" y1="50" x2="800" y2="50"/>
+     <rect class="cls-1 hum" x="50" y="100" width="700" height="75" rx="37.5"/>
+     <line class="cls-1 hum" y1="225" x2="800" y2="225"/>
+     <line class="cls-1 hum" x1="400" y1="400" x2="400" y2="225"/>
+     <rect class="cls-1 hum" x="50" y="450" width="700" height="300"/>
+     </svg>
+     
+     <!-- 훔 -->
+     <!-- 친 -->
+     <span id="ratioG">
+        <input id="sliderG" data-slider-id='sliderG' type="text" data-slider-min="0" data-slider-max="50" data-slider-step="1" data-slider-value="10"  data-slider-handle="square"/>
+    
+     <svg  id="chin" class="word_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+     <line class="cls-1 chin" y1="100" x2="400" y2="100"/>
+     <path class="cls-1 chin" d="M200,0V150c0,110.46-89.54,200-200,200H0"/>
+     <path class="cls-1 chin" d="M200,0V150c0,110.46,89.54,200,200,200h0"/>
+     <line class="cls-1 chin" x1="750" x2="750" y2="400"/>
+     <polyline class="cls-1 chin" points="50 400 50 750 800 750"/>
+     </svg>
+     </span>
+     <!-- 친 -->
+     <!-- 집 -->
+     
+     <svg id="zip" class="word_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+     <line class="cls-1 zip" y1="50" x2="400" y2="50"/>
+     <path class="cls-1 zip" d="M200,0V150c0,110.46-89.54,200-200,200H0"/>
+     <path class="cls-1 zip" d="M200,0V150c0,110.46,89.54,200,200,200h0"/>
+     
+     <line class="cls-1 zip" x1="750" x2="750" y2="400"/>
+     
+     <polyline class="cls-1 zip" points="50 400 50 750 750 750 750 400"/>
+     <line class="cls-1 zip" x1="50" y1="550" x2="750" y2="550"/>
+     </svg>
+     
+     <!-- 집 -->
+     <!-- 사 -->
+     
+     <svg id="sa" class="word_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800">
+     <path class="cls-1 sa" d="M200,0V550c0,110.46-89.54,200-200,200H0"/>
+     <path class="cls-1 sa" d="M200,0V550c0,110.46,89.54,200,200,200h0"/><line class="cls-1 sa" x1="750" x2="750" y2="800"/>
+     <line class="cls-1 sa" x1="900" y1="400" x2="800" y2="400"/>
+     </svg>
+     
+     <!-- 사 -->
+<!--  ratio DE   -->
+    <input id="sliderDE" data-slider-id='sliderDE' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50"  data-slider-handle="square"/>
+<!--  ratio DE   -->
+   </div>
+    </article>
+	<!--  Slider   -->
+		<span id="slider_wrap4">
+			<label>글자 사이즈</label>
+			<input id="sliderS" data-slider-id='sliderS' type="text" data-slider-min="100" data-slider-max="200" data-slider-step="1" data-slider-value="100"  data-slider-handle="round"/><br>	
+			<label>굵기조절</label>
+			<input id="sliderW" data-slider-id='sliderW' type="text" data-slider-min="10" data-slider-max="40" data-slider-step="1" data-slider-value="10"  data-slider-handle="round"/>		
+		</span>
+	<!--  Slider   -->
+
+	</section>
+
+	<script src="js/page1.js"></script>
+	<script src="js/page4.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/master.js"></script>
+</body>
+</html>

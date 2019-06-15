@@ -1,0 +1,170 @@
+	  
+      .slider.slider-horizontal {
+		  display:block;
+		    margin-left:auto;
+		  margin-right:auto;
+			width: 400px;
+			height: 25px;
+		}
+/*      수평 슬라이더 손잡이( 흰 )*/
+      #sec4 .slider.slider-horizontal .slider-handle {
+        margin-left: -10px;
+        background: white;
+        width: 12.5px;
+        height: 25px;
+        margin-top: -3px;
+        margin-left: -7px;
+      }
+/*      수직 슬라이더 손잡이( 흰 )*/
+      #sec4 .slider.slider-vertical .slider-handle {
+        margin-left: -12.5px;
+        background: white;
+        width: 28px;
+        height: 12.5px;
+        margin-top: -7px;
+    }
+/*    수평 슬라이더 S W 설정*/
+      #sec4 #sliderS .slider-handle
+	  ,#sec4 #sliderW .slider-handle{
+        margin-top: 2px;
+        margin-left: -12.5px;
+        width: 24px;
+        height: 24px;
+        background: #111;
+      }
+/*    수평 슬라이더 S W 설정*/
+/*    수직 슬라이더 C 설정*/
+      #sec4 #sliderC,#sliderDE{
+          vertical-align: super;
+      }
+      #sec4 #sliderC .slider-track{
+        width: 2px;
+        left: 0;
+      }
+/*    수직 슬라이더 C 설정*/
+/*    수직 슬라이더 DE 설정*/
+      #sec4 #sliderDE{
+          margin-left:10px;
+          margin-bottom:50px;
+      }
+    #sec4 #sliderDE .slider-track {
+        width: 2px;
+        left: 0;
+    }
+/*    수직 슬라이더 DE 설정*/
+/*    수직 슬라이더 AB 설정*/
+      #ratioAB .slider-track {
+        height: 2px;
+        width: 100%;
+        margin-top: -5px;
+        top: 50%;
+        left: 0;
+      }
+      #sliderAB{
+        top: 20px;
+        left: 5px;
+      }
+/*    수직 슬라이더 AB 설정*/
+/*	    sec1 두께 슬라이더 디자인*/
+	  #sec1 .structure3 #sliderW_ .slider-track
+	  {background: #ddd;height:10px;}
+	  #sec1 .structure3 #sliderW_ .slider-selection
+	  {
+		  background: #eee;
+	  }
+	  #sec1 .structure3 #sliderW_ .slider-handle
+	  {
+		background: #eee;
+		height: 20px;
+		width: 20px;
+		margin-top: 3px;
+	  }
+/*	    sec1 두께 슬라이더 디자인*/
+	  	#sec1 .structure2  .col_left{
+			margin:  0 10px 0 0;
+		}
+	  	#sec1 .structure2  .line_top
+	  ,	#sec1 .structure2  .line_mid
+	  	{
+			margin:  0 0 10px 0;
+		}
+/*  슬라이더 위치조정  */
+	  #sec1 .slider_wrap_left{
+		display: flex;
+		flex-direction: column-reverse;
+		width: 44px;
+	  }
+	  #slider_wrap_left2{
+		  margin: 0 20px 0 10px;
+	  }
+	  #slider_wrap_left3{
+		  margin: 0 30px 0 30px;
+	  }
+	#sec1 .slider-vertical{
+ 	       margin-left: auto;
+    	margin-right: auto;
+	  }
+	  #sec1 #sliderAB_{
+		  margin-bottom: 40px;
+	  }
+/*  슬라이더 위치조정  */
+/*	  슬라이더 색상 #3b54a4 */
+	#sec1 .slider-track
+	,#sec1 .slider-selection{
+		background: #3b54a4;
+	}
+/*	  슬라이더 색상 #3b54a4 */
+/*	  슬라이더 두께 2px */
+	  #sec1 .slider-vertical .slider-track{
+		  width:2px;
+    	  left: 9px;
+	  }
+	  #sec1 .slider-horizontal .slider-track{
+		  height:2px;
+	  }
+/*	  슬라이더 두께 2px */
+/*    수직 슬라이더 AB_ 설정*/
+		#sec1 .slider.slider-horizontal {
+			width: 450px;
+			height: 25px;
+		}
+/*    수직 슬라이더 AB_ 설정*/
+/*      수평 슬라이더 손잡이( 검 )*/
+      #sec1 .slider.slider-horizontal .slider-handle {
+        margin-left: -10px;
+        background: black;
+        width: 22px;
+        height: 44px;
+        margin-top: -11px;
+        margin-left: -7px;
+      }
+/*      수평 슬라이더 손잡이( 검 )*/
+/*      수직 슬라이더 손잡이( 검 )*/
+      #sec1 .slider.slider-vertical .slider-handle {
+		margin-left: -12px;
+        background: black;
+        width: 44px;
+        height: 20px;
+        margin-top: -7px;
+    }
+/*    수직 슬라이더 C_ 설정*/
+	  
+      #sec1 #sliderC_,#sec1 #sliderDE_{
+          vertical-align: super;
+      }
+      #sec1 #sliderC_{
+		  height:450px;
+      }
+/*    수직 슬라이더 C_ 설정*/
+/*    수직 슬라이더 DE_ 설정*/
+	  #sec1 #sliderDE_{
+		  height:225px;
+		  margin-bottom: 225px;
+      }
+/*    수직 슬라이더 DE_ 설정*/
+/*    수직 슬라이더 G_ 설정*/
+	  #sec1 #sliderG_{
+		  height:44px;
+		  margin-bottom: 203px;
+      }
+/*    수직 슬라이더 G_ 설정*/
