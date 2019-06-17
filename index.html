@@ -25,376 +25,22 @@
 	<!-- bootstrap-slider -->
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/slider.css">
-  <style>
-    section{
-        padding: 50px 40px 50px 40px;
-		height:1080px;
-    }
-	#sec1{
-		padding: 50px 0px 167px 40px;
-	}
-	  .container1{
-		  display:flex;
-	  }
-	  .item{
-		  height: 30px;
-	  }
-	  .ra,.rb,.rd,.re{
-		  flex:50;
-	  }
-      .rc,.rf{
-        flex:100;
-      }
-	  .cls-1{
-		  fill:none;
-		  stroke:#FFF;
-		  stroke-miterlimit:10;
-	  }
-	  .cls-2{
-		  fill:none;
-		  stroke:#000;
-		  stroke-miterlimit:10;
-	  }
-	  .slider_wrap{
-		  display:flex;
-	  }
-	  label{
-		  display: block;
-		  text-align: center;
-	  }
-	  .item{
-		  text-align:center;
-		  padding-top: 4px;
-		  font-weight: bold;
-		  font-size: 18px;
-	  }
-      #sec4 svg{
-        margin: 5px;
-		  stroke:white;
-      }
-	  #sec1 svg{
-		  stroke:black;
-      }
-	  #darkkongpot{
-		  margin-left:auto;
-		  margin-right:auto;
-	  }
-
-	  .wrap4,#dark_wrap{
-		  display:flex;
-          flex-direction: column;
-	  }
-
-/*   darkkongpot ratioAB   */
-      #ratioAB{
-          position:relative;
-      }
-      #ratioAB div{
-          display:inline-block;
-          position: absolute;
-      }
-
-/*   darkkongpot ratioAB   */
-/*   darkkongpot ratioG   */
-      #ratioG .slider-track {
-        height: 2px;
-        width: 100%;
-        margin-top: -5px;
-        top: 50%;
-        left: 0;
-      }
-/*   darkkongpot ratioG   */
-/*   chin div==> inline-block      */
-      #ratioG{
-          position:relative;
-      }
-      #ratioG div{
-          display:inline-block;
-          position: absolute;
-      }
-      #sliderG{
-          left:25px;
-          bottom:110px;
-      }
-/*   chin div==> inline-block      */
-      .sec{
-        display:flex;
-        position:relative;
-      }
-      #sec2{
-        color:#fff;
-        background-color:black; 
-        flex-direction: row;
-      }
-      #sec4{
-		padding: 0;
-        background-color:black;
-        justify-content: center;
-        flex-direction: column;
-	  }
-	  #slider_wrap4{
-		  position: absolute;
-		  right:100px;
-		  bottom: 90px;
-	  }
-/*   page02_left   */
-      #page02_left{
-          flex:35;
-      }
-/*   page02_left   */
-/*   page02_right   */
-      #page02_right{
-          flex:65;
-          display: flex;
-          justify-content: center;
-        flex-direction: column;
-      }
-      #page02_right img{
-        height: 930px;
-        margin-bottom: 50px;
-      }
-      #page02_right .caption{
-          position:absolute;
-          z-index:5;
-		  font-size: 18px;
-    	font-weight: bold;
-      }
-      #page02_right #caption1{
-		right: 471px;
-		top: 374px;
-      }
-      #page02_right #caption2{
-		right: 1081px;
-		top: 680px;
-      }
-      #page02_right #caption3{
-		  right: 768px;
-          top: 680px;
-      }
-      #page02_right #caption4{
-		  right: 462px;
-          top: 680px;
-      }
-      #page02_right #caption5{
-    	right: 153px;
-          top: 680px;
-      }
-      #page02_right #caption6{
-		right: 470px;
-		top: 985px;
-      }
-      #page02_right #caption7{
-		right: 118px;
-          top: 985px;
-      }
-/*   page02_right   */
-/*   header   */
-      #header{
-		position: fixed;
-		width: 532px;
-		height: 200px;
-		color: #000;
-		top: 50px;
-		left: 40px;
-		z-index: 5;
-		transition-duration: 0.4s;
-      }
-      #header>.square{
-		width: 193px;
-		height: 37px;
-		background: #000;
-      }
-      #header>.main_title{
-        font-size: 2.8rem;
-        font-weight: 900;
-        margin-top: 15px;
-        margin-bottom: 35px;
-      }
-      #header>.summary{
-        font-weight: bold;
-        font-size: 12px;
-      }
-      .summary .summary_part{
-        margin-bottom:7px;
-      }
-/*   header   */
-/*   header2   */
-      .header2{
-          position:absolute;
-/*          background: #789;*/
-          width:672px;
-          height:300px;
-          color:#fff;
-      }
-/*   header2   */
-/*   header4   */
-      .header4{
-        position: absolute;
-        width: 672px;
-        height: 300px;
-        color: #fff;
-        top: 50px;
-      }
-/*   header4   */
-/*   sec1   */
-	  #sec1 > .author{
-		  position:absolute;
-		  left: 600px;
-		  font-size: 18px;
-		  font-weight: bold;
-		  top: 43px;
-	  }
-	  #sec1 > .subject{
-		  position:absolute;
-		  right: 40px;
-		  top: 50px;
-		  font-size:20px;
-		  font-weight: bold;
-		  top: 43px;
-	  }
-	  #sec1 > .subject > .subject_item{
-		display: inline-block;
-		margin-left: 14px;
-	  }
-	  #sec1 .structure1
-		,#sec1 .structure2
-	  ,#sec1 .structure3{
-			display: flex;
-			flex-direction: column-reverse;
+  <link rel="stylesheet" href="css/master.css">
+	<style>
+		#sec3 #page3_Asset01{
+			position: absolute;
+			left: 1119px;
+			height: 880px;
+			top: 100px;
 		}
-
-	  #sec1 .structure1_item
-	  ,#sec1 .structure2_item{
-		  fill:#000;
-		  stroke:#fff;
-		  stroke-miterlimit:10;
-		  
-		display: flex;
-		flex-direction: column-reverse;
-		padding-bottom: 100px;
-	  }
-	  #sec1 .structure3{
-		  margin-left:80px;
-	  }
-		#sec1 .structure3  .line_mid{
-			margin: 10px 0 10px 0;
+		
+		#sec3 #page3_Asset02{
+			position: absolute;
+			top: 800px;
+			left: 200px;
+			width: 600px;
 		}
-	  	#sec1 .structure3  .col_center{
-			margin:  0 10px 0 10px;
-		}
-		#sec1 .structure3 #sliderW_{
-			margin-bottom: 60px;
-			width:200px;
-		}
-
-/*   sec1   */
-/*   sec2   */
-      #sec2 .small_title{
-        position: absolute;
-        top: 342px;
-        font-size: 18px;
-        font-weight: 900;
-      }
-      #sec2 .small_title .small_title_part{
-          margin-bottom:5px;
-      }
-    #sec2 .description2 {
-        position: absolute;
-        top: 409px;
-        left: 189px;
-        width: 308px;
-        font-size: 1.1rem;
-    }
-      #sec2 .description2 .des_box1{
-          margin-bottom: 30px;
-      }
-      #sec2 .description2 .des_box1 .des_line{
-          margin-bottom: 9px;
-      }
-/*   sec2   */
-/*	 sec3   */
-	#sec3 .small_title{
-		position: absolute;
-		top: 485px;
-		font-size: 18px;
-		font-weight: 900;
-	}
-	#sec3 .small_title .small_title_part{
-		margin-bottom:5px;
-	}
-	  
-    #sec3 .description2 {
-		position: absolute;
-		top: 326px;
-		left: 204px;
-		width: 590px;
-		font-size: 12px;
-    }
-	#sec3 .description2 .des_box1{
-		margin-bottom: 30px;
-	}
-	#sec3 .description2 .des_box1 .des_line{
-		margin-bottom: 9px;
-	}
-/*	 sec3   */
-/*	 sec4   */
-	  #sliderS .slider-track
-	  ,#sliderW .slider-track
-	  {background: #333;}
-	  #sliderS .slider-selection
-	  ,#sliderW .slider-selection
-	  {
-		  background: #111;
-	  }
-	  #sliderS .slider-handle
-	  ,#sliderW .slider-handle
-	  {
-		background: #111;
-		height: 20px;
-		width: 20px;
-		margin-top: 3px;
-	  }
-/*	 sec4   */
-/*	footer  */
-	  .footer{
-		position: absolute;
-		bottom: 70px;
-		width: 100%;
-		font-weight: 900;
-		font-size: 24px;
-		color: white;	
-	  }
-	  .footer .footer_mention{
-		  text-align: center;
-		  margin-bottom:10px;
-	  }
-/*	footer  */
-/*  tag  */
-	  .tag:hover{
-		  cursor: pointer;
-	  }
-	  .tag{
-		position: absolute;
-		bottom: 0px;
-		font-size: 24px;
-		font-weight: bold;
-		text-align: center;
-		width: 193px;
-		height: 80px;
-		padding-top: 25px;
-	  }
-	  .tag_black{
-		  right: 50px;
-		  background:black;
-		  color:white;
-	  }
-	  .tag_white{
-		  left: 50px;
-		  background:white;
-		  color:black;
-	  }
-/*  tag  */
-  </style>
+	</style>
 </head>
 <body>
  	<div id="header">
@@ -550,10 +196,10 @@
 				<!-- 체 -->
 				<!-- 가 -->
 
-				<svg id="ga" class="word_svg_" xmlns="http://www.w3.org/2000/svg" width="237.5" height="200" viewBox="0 0 950 800">
+				<svg id="ga" class="word_svg_" xmlns="http://www.w3.org/2000/svg" width="225" height="200" viewBox="0 0 900 800">
 				 <polyline class="cls-2 ga" points="0 50 350 50 350 800" />
 				 <line class="cls-2 ga" x1="750" x2="750" y2="800" />
-				 <line class="cls-2 ga" x1="750" y1="400" x2="950" y2="400" />
+				 <line class="cls-2 ga" x1="750" y1="400" x2="900" y2="400" />
 				</svg>
 
 				<!-- 가 -->
@@ -684,6 +330,29 @@
 			허나 모음자소 중 ‘ㅏ’, ‘ㅑ’는 방의 중심에서 오른쪽 반절로 뻗어나가는 형태가 아닌 먼저 맨 오른쪽 획을 채우고 공간</p><p class="des_line">  밖으로 뻗도록 설계했습니다. 이는 모음자소가 차지하는 방의 크기를 시각적으로 오판단하는 것을 줄이고, 받침이 있는</p><p class="des_line">  모임꼴에서 구조적 위화감을 줄이기 위함입니다. 가로모임꼴은 두 모음이 결합되는 것 이외에 더 자소가 들어서지 않지만,</p> 세로모임꼴은 모음자소 밑에 자음자소가 붙어 형태가 일부 모임꼴에서 우그러뜨려질 수 있는 것을 고려하였습니다.
 			</div>
 		</div>
+<!--	page3_Asset1 -->
+		<img  id="page3_Asset01" src="svg/page3_Asset01.svg" alt="자음 사진" >
+<!--	page3_Asset1 -->
+<!--	page3_Asset2 -->
+		<img id="page3_Asset02" src="svg/page3_Asset02.svg" alt="모음 사진" >	
+<!--	page3_Asset2 -->
+<!--	page3_captions	-->
+	<div id="caption1" class="caption">
+        &lt;모음자소&gt;
+        </div><div id="caption2" class="caption">
+        &lt;기억 계열(ㄱ, ㅋ, ㄲ)&gt;
+        </div><div id="caption3" class="caption">
+        &lt;니은 계열(ㄴ, ㄷ, ㅌ, ㄸ)&gt;
+        </div><div id="caption4" class="caption">
+        &lt;리을 계열(ㄹ)&gt;
+        </div><div id="caption5" class="caption">
+        &lt;미음 계열(ㅁ, ㅂ, ㅍ)&gt;
+        </div><div id="caption6" class="caption">
+        &lt;시옷 계열(ㅅ, ㅈ, ㅊ, ㅆ, ㅉ)&gt;
+        </div><div id="caption7" class="caption">
+        &lt;이응 계열(ㅇ, ㅎ)&gt;
+        </div>
+<!--	page3_captions	-->
 		<div class="tag tag_black" onclick="moveTo(3);">
 			예문 2
 		</div>

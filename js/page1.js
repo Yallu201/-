@@ -118,6 +118,7 @@
 		temp2[1].setAttribute('width',800);
 		temp2[1].setAttribute('height',re - g);
 	}
+
 	function setStructure3(a,c,d,g){
 		var b = 100-a;
 		var e = 100-d;
@@ -138,6 +139,7 @@
 		temp3[1].setAttribute('width',rb - g);
 		temp3[1].setAttribute('height',800);
 	}
+
 	function setStructure4(a,c,d,g){
 		var b = 100-a;
 		var e = 100-d;
@@ -671,12 +673,6 @@
 			ddae[i].setAttribute("stroke-width",w);
 		}
 	}  
-	
-
-
-
-
-
 
 	function setFontSize_(val){
 		var words = document.getElementsByClassName("word_svg_");
